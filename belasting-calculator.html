@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Belastingcalculator 2026 | Gratis Online</title>
+<meta name="description" content="Bereken je inkomstenbelasting Nederland 2026">
+<meta name="keywords" content="belasting berekenen, inkomstenbelasting calculator">
+<meta property="og:title" content="Belastingcalculator 2026">
+<meta property="og:description" content="Bereken je inkomstenbelasting Nederland 2026">
+<meta name="robots" content="index, follow">
+<style>
+:root {
+  --bg:      #0a0a0f;
+  --surface: #12121a;
+  --card:    #1a1a2e;
+  --accent:  #6c63ff;
+  --accent2: #ff6584;
+  --text:    #e8e8f0;
+  --muted:   #888899;
+  --success: #00d4aa;
+  --border:  rgba(108,99,255,0.25);
+  --glow:    0 0 30px rgba(108,99,255,0.3);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  min-height: 100vh;
+}
+.hero {
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0a2e 50%, #0a1a2e 100%);
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(108,99,255,0.15) 0%, transparent 70%);
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  z-index: 1;
+}
+.hero p {
+  color: var(--muted);
+  margin-top: .75rem;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+.badge {
+  display: inline-block;
+  background: rgba(108,99,255,0.2);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: .25rem .75rem;
+  border-radius: 999px;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.container {
+  max-width: 860px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--glow);
+  transition: transform .2s, box-shadow .2s;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 50px rgba(108,99,255,0.4);
+}
+.field-group {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+label {
+  display: block;
+  font-size: .85rem;
+  color: var(--muted);
+  margin-bottom: .4rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+input[type=number] {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: .75rem 1rem;
+  color: var(--text);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+input[type=number]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(108,99,255,0.15);
+}
+.btn {
+  width: 100%;
+  background: linear-gradient(135deg, var(--accent), #9c93ff);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .2s, transform .15s;
+  letter-spacing: .03em;
+}
+.btn:hover { opacity:.9; transform:scale(1.01); }
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.result-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  text-align: center;
+}
+.result-box .label {
+  font-size: .8rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.result-box .value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--success);
+  margin-top: .4rem;
+}
+.result-box.accent .value { color: var(--accent); }
+.result-box.danger .value { color: var(--accent2); }
+.faq { margin-top: 2rem; }
+.faq h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.faq-item { margin-bottom: 1rem; }
+.faq-item h3 { font-size: 1rem; margin-bottom: .4rem; }
+.faq-item p  { color: var(--muted); font-size: .9rem; line-height: 1.6; }
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--muted);
+  font-size: .85rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+}
+</style>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5382997898313669" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="hero">
+  <div class="badge">Bijgewerkt 2026 · 100% Gratis</div>
+  <h1>Belastingcalculator 2026</h1>
+  <p>Bereken je inkomstenbelasting Nederland 2026</p>
+</div>
+
+<div class="container">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+  <div class="card">
+    <div class="field-group">
+      <div>
+        <label>Bruto jaarinkomen (€)</label>
+        <input type="number" id="income" placeholder="55000" value="55000" min="0">
+      </div>
+      <div>
+        <label>Algemene heffingskorting</label>
+        <input type="number" id="heffing" value="3070" min="0">
+      </div>
+      <div>
+        <label>Arbeidskorting</label>
+        <input type="number" id="arbeids" value="5052" min="0">
+      </div>
+    </div>
+    <button class="btn" onclick="calc()">Bereken mijn belasting</button>
+    <div id="results" class="result-grid" style="display:none"></div>
+  </div>
+
+  <div class="faq">
+    <h2>Veelgestelde vragen</h2>
+    <div class="faq-item">
+      <h3>Hoe wordt de inkomstenbelasting berekend in 2026?</h3>
+      <p>In Nederland geldt een progressief belastingstelsel. Over de eerste €75.518 betaal je 36,97%, over het meerdere 49,50%. Heffingskortingen verminderen het te betalen bedrag.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Wat is de algemene heffingskorting 2026?</h3>
+      <p>De algemene heffingskorting bedraagt maximaal €3.070 in 2026. Deze wordt verminderd naarmate je inkomen hoger is.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is deze calculator accuraat?</h3>
+      <p>Deze tool geeft een goede indicatie maar is niet bedoeld als officieel belastingadvies. Raadpleeg de Belastingdienst voor exacte berekeningen.</p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="9876543210" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+
+<footer>
+  <p>Belastingcalculator 2026 · Gebaseerd op Nederlandse belastingwetgeving · Geen officieel advies</p>
+  <p style="margin-top:.5rem"><a href="/privacy.html" style="color:var(--accent)">Privacy</a> · <a href="/sitemap.xml" style="color:var(--accent)">Sitemap</a></p>
+</footer>
+
+<script>
+const RATES = [[75518, 36.97], [999999, 49.5]];
+function calc() {
+  const income  = parseFloat(document.getElementById('income').value)  || 0;
+  const heffing = parseFloat(document.getElementById('heffing').value) || 0;
+  const arbeids = parseFloat(document.getElementById('arbeids').value) || 0;
+
+  let tax = 0, remaining = income;
+  let prev = 0;
+  for (const [bracket, pct] of RATES) {
+    if (remaining <= 0) break;
+    const slice = Math.min(remaining, bracket - prev);
+    tax += slice * pct / 100;
+    remaining -= slice;
+    prev = bracket;
+  }
+  const kortingen   = Math.min(heffing + arbeids, tax);
+  const net_tax     = Math.max(0, tax - kortingen);
+  const net_income  = income - net_tax;
+  const effective   = income > 0 ? (net_tax / income * 100).toFixed(1) : 0;
+  const monthly     = (net_income / 12).toFixed(0);
+
+  const fmt = n => new Intl.NumberFormat('nl-NL',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
+
+  document.getElementById('results').style.display = 'grid';
+  document.getElementById('results').innerHTML = `
+    <div class="result-box danger">
+      <div class="label">Belasting</div>
+      <div class="value">${fmt(net_tax)}</div>
+    </div>
+    <div class="result-box">
+      <div class="label">Netto jaar</div>
+      <div class="value">${fmt(net_income)}</div>
+    </div>
+    <div class="result-box accent">
+      <div class="label">Netto/maand</div>
+      <div class="value">${fmt(monthly)}</div>
+    </div>
+    <div class="result-box">
+      <div class="label">Effectief tarief</div>
+      <div class="value">${effective}%</div>
+    </div>
+  `;
+}
+calc();
+</script>
+</body>
+</html>
